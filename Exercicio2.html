@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercicio 2</title>
+    <meta charset="UTF-8">
+
+    <script>
+        var idades = [8, 11, 15, 15, 21, 19, 25, 30, 31, 32, 33, 49, 87, 80, 87];
+        var opinioes = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 2, 1];
+
+        function otimoMedia(opinioes, idades) {
+            var soma = 0;
+            var qtd = 0;
+            for (let i = 0; i < opinioes.length; i++) {
+                if (opinioes[i] === 3) {
+                    soma += idades[i];
+                    qtd++;
+                }
+            }
+            return (soma / qtd);
+        }
+
+        function regularQtde(opinioes) {
+            var qtd = 0;
+
+            for (let i = 0; i < opinioes.length; i++) {
+                if (opinioes[i] === 1) {
+                    qtd++;
+                }
+            }
+            return qtd;
+        }
+
+        function bomPorcentagem(opinioes) {
+            var qtd = 0;
+
+            for (let i = 0; i < opinioes.length; i++) {
+                if (opinioes[i] === 2) {
+                    qtd++;
+                }
+            }
+            return (qtd / opinioes.length) * 100;
+        }
+
+        alert("Média de idades dos espectadores que Responderam ÓTIMO é " + otimoMedia(opinioes, idades).toFixed(1));
+        alert(regularQtde(opinioes) + " Pessoas responderam REGULAR.");
+        alert(bomPorcentagem(opinioes).toFixed(0) +"% Das pessoas responderam BOM.");
+    </script>
+
+</head>
+
+<body style="background-color:  #bfbfbf; text-align: center; color:  #0043ff;">
+    <div style="margin-top:20%;">
+        <h1><a href="index.html">Voltar </a></h1>
+    </div>
+</body>
+</html>

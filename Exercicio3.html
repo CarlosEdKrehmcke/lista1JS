@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercicio 3</title>
+    <meta charset="UTF-8">
+   
+    <script>
+        var numeros = [3, 7, 15, 20, 9, 27, 82, 19, 33, 9]
+
+        function numerosParesSomaString(numeros) {
+            var soma = 0;
+            var numerosPares = "";
+            for (let i = 0; i < numeros.length; i++) {
+                if (numeros[i] % 2 == 0) {
+                    soma += numeros[i];
+                    numerosPares += numeros[i].toString() + " ";
+                }
+            }
+            return [soma, numerosPares];
+        }
+
+        function primoFuncao(num) {
+            for (let i = 2; i < num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function numerosPrimosSomaString(numeros) {
+            var soma = 0;
+            var numerosPrimos = "";
+            for (let i = 0; i < numeros.length; i++) {
+                if (primoFuncao(numeros[i])) {
+                    soma += numeros[i];
+                    numerosPrimos += numeros[i].toString() + " ";
+                }
+            }
+            return [soma, numerosPrimos];
+        }
+        var paresArray = numerosParesSomaString(numeros);
+        alert("Números pares: " + paresArray[1] +
+            ".\nSoma: " + paresArray[0] + ".");
+        var primosArray = numerosPrimosSomaString(numeros);
+        alert("Números primos: " + primosArray[1] +
+            ".\nSoma: " + primosArray[0] + ".");
+    </script>
+
+</head>
+
+<body style="background-color:  #bfbfbf; text-align: center; color:  #0043ff;">
+    <div style="margin-top:20%;">
+        <h1><a href="index.html">Voltar </a></h1>
+    </div>
+</body>
+
+</html>
